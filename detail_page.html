@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goal Detail - My Savings</title>
+    <link rel="stylesheet" href="css/detail_page.css">
+    <!-- Supabase SDK CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/app.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="top-nav">
+            <a href="index.html" class="back-btn">← All Goals</a>
+        </div>
+
+        <div class="box1">
+            <p>🐷</p>
+            <h1 id="detailGoalTitle">Loading...</h1>
+            <p>Track your goal, make your dream</p>
+        </div>
+
+        <div class="box2 deposit-box">
+            <h2 class="section-title">Add Deposit</h2>
+            <form id="depositForm" class="deposit-form">
+                <input type="number" id="depositAmount" placeholder="Enter amount (฿)" min="1" required>
+                <button type="submit" class="btn-primary">Save Money</button>
+            </form>
+        </div>
+
+        <div class="box2">
+            <div class="subbox">
+                <div class="subbox1_1">
+                    <p>GOAL</p>
+                    <span id="detailCurrent">0</span><span>฿</span>
+                    <p>of <span id="detailTarget">0</span><span>฿</span> target</p>
+                </div>
+                <div class="subbox1_1">
+                    <span id="detailPercent">0</span><span>%</span>
+                </div>
+            </div>
+            <div class="subbox">
+                <div class="progress-bar">
+                    <div id="detailProgressBar" class="progress-bar-fill" style="width: 0%;"></div>
+                </div>
+                <div class="progress-labels">
+                    <span>0฿</span>
+                    <span id="detailMid">0฿</span>
+                    <span id="detailEnd">0฿</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="box3">
+            <div class="card">
+                <p class="card-icon">📅</p>
+                <span>9</span>
+                <p>Months saved</p>
+            </div>
+            <div class="card">
+                <p class="card-icon">📊</p>
+                <span id="detailAvg">0</span><span>฿</span>
+                <p>Avg / month</p>
+            </div>
+            <div class="card">
+                <p class="card-icon">⭐</p>
+                <span id="detailBest">0</span><span>฿</span>
+                <p>Best month</p>
+            </div>
+        </div>
+
+        <div class="box4">
+            <div class="chart-container">
+                <div class="chart-column">
+                    <div class="bar" style="height: 30px;"></div>
+                    <span class="label-val">k</span>
+                    <span class="label-month">Jan</span>
+                </div>
+                <div class="chart-column">
+                    <div class="bar" style="height: 45px;"></div>
+                    <span class="label-val">k</span>
+                    <span class="label-month">Feb</span>
+                </div>
+                <div class="chart-column">
+                    <div class="bar" style="height: 60px;"></div>
+                    <span class="label-val">k</span>
+                    <span class="label-month">Mar</span>
+                </div>
+                <div class="chart-column">
+                    <div class="bar" style="height: 40px;"></div>
+                    <span class="label-val">k</span>
+                    <span class="label-month">Apr</span>
+                </div>
+                <div class="chart-column">
+                    <div class="bar" style="height: 85px;"></div>
+                    <span class="label-val">k</span>
+                    <span class="label-month">May</span>
+                </div>
+                <div class="chart-column">
+                    <div class="bar" style="height: 55px;"></div>
+                    <span class="label-val">k</span>
+                    <span class="label-month">Jun</span>
+                </div>
+                <div class="chart-column">
+                    <div class="bar" style="height: 75px;"></div>
+                    <span class="label-val">k</span>
+                    <span class="label-month">Jul</span>
+                </div>
+                <div class="chart-column">
+                    <div class="bar" style="height: 50px;"></div>
+                    <span class="label-val">k</span>
+                    <span class="label-month">Aug</span>
+                </div>
+                <div class="chart-column">
+                    <div class="bar" style="height: 80px;"></div>
+                    <span class="label-val">k</span>
+                    <span class="label-month">Sep</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="box5">
+            <p>You're doing amazing! 🎉</p>
+            <p>Only <span id="detailRemain">0</span>฿ more to reach your dream goal.</p>
+        </div>
+    </div>
+</body>
+
+</html>
